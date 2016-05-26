@@ -9,6 +9,7 @@ node: v5.5.0
 ```
 npm install jspm@beta -g
 brew install caddy
+NODE_ENV=development npm i
 jspm i
 ```
 

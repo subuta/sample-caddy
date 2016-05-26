@@ -1,24 +1,114 @@
 {
   "scripts": {
-    "serve": "caddy",
-    "watch": "./node_modules/.bin/chokidar-socket-emitter -l 8090"
+    "serve": "caddy & npm run watch",
+    "watch": "./node_modules/.bin/chokidar-socket-emitter -l 8090 & jspm bundle src/app.js -wid",
+    "unwatch": "jspm unbundle src/app.js"
   },
   "jspm": {
     "name": "sample-caddy",
     "main": "sample-caddy.js",
     "directories": {
       "lib": "src",
-      "baseURL": "./"
+      "baseURL": "."
     },
-    "dependencies": {},
+    "dependencies": {
+      "autoprefixer": "npm:autoprefixer@^6.3.6",
+      "babel-plugin-transform-object-rest-spread": "npm:babel-plugin-transform-object-rest-spread@^6.8.0",
+      "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@^6.8.0",
+      "babel-polyfill": "npm:babel-polyfill@^6.9.0",
+      "co": "npm:co@^4.6.0",
+      "css": "github:systemjs/plugin-css@^0.1.22",
+      "free-style": "npm:free-style@^1.2.1",
+      "icepick": "npm:icepick@^1.2.0",
+      "jsx": "github:floatdrop/plugin-jsx@^1.2.1",
+      "lodash": "npm:lodash@^4.13.1",
+      "normalizr": "npm:normalizr@^2.1.0",
+      "postcss-js": "npm:postcss-js@^0.1.3",
+      "react-dom": "npm:react-dom@^15.1.0",
+      "react-redux": "npm:react-redux@^4.4.5",
+      "react-router": "npm:react-router@^2.4.1",
+      "react-router-redux": "npm:react-router-redux@^4.0.4",
+      "react-tap-event-plugin": "npm:react-tap-event-plugin@^1.0.0",
+      "redux-batched-actions": "npm:redux-batched-actions@^0.1.2",
+      "redux-thunk": "npm:redux-thunk@^2.1.0"
+    },
     "devDependencies": {
-      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
-      "net": "github:jspm/nodelibs-net@^0.2.0-alpha",
+      "gulp": "npm:gulp@^3.9.1",
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.11",
+      "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.5.8"
+    },
+    "peerDependencies": {
+      "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
+      "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
+      "child_process": "github:jspm/nodelibs-child_process@^0.2.0-alpha",
+      "constants": "github:jspm/nodelibs-constants@^0.2.0-alpha",
+      "crypto": "github:jspm/nodelibs-crypto@^0.2.0-alpha",
+      "domain": "github:jspm/nodelibs-domain@^0.2.0-alpha",
+      "events": "github:jspm/nodelibs-events@^0.2.0-alpha",
+      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+      "http": "github:jspm/nodelibs-http@^0.2.0-alpha",
+      "https": "github:jspm/nodelibs-https@^0.2.0-alpha",
+      "module": "github:jspm/nodelibs-module@^0.2.0-alpha",
+      "net": "github:jspm/nodelibs-net@^0.2.0-alpha",
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
+      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
       "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
-      "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.5.8",
+      "react": "npm:react@^15.1.0",
+      "redux": "npm:redux@^3.5.2",
+      "stream": "github:jspm/nodelibs-stream@^0.2.0-alpha",
+      "string_decoder": "github:jspm/nodelibs-string_decoder@^0.2.0-alpha",
+      "timers": "github:jspm/nodelibs-timers@^0.2.0-alpha",
       "tty": "github:jspm/nodelibs-tty@^0.2.0-alpha",
-      "util": "github:jspm/nodelibs-util@^0.2.0-alpha"
+      "url": "github:jspm/nodelibs-url@^0.2.0-alpha",
+      "util": "github:jspm/nodelibs-util@^0.2.0-alpha",
+      "vm": "github:jspm/nodelibs-vm@^0.2.0-alpha",
+      "zlib": "github:jspm/nodelibs-zlib@^0.2.0-alpha"
+    },
+    "overrides": {
+      "npm:browserify-zlib@0.1.4": {
+        "dependencies": {
+          "readable-stream": "^2.0.2",
+          "pako": "~0.2.0"
+        },
+        "map": {
+          "_stream_transform": "readable-stream/transform"
+        }
+      },
+      "npm:inherits@2.0.1": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:readable-stream@1.0.34": {
+        "map": {
+          "stream": "stream-browserify/index"
+        },
+        "systemjs": {
+          "main": "readable.js"
+        },
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "isarray": "0.0.1",
+          "string_decoder": "~0.10.0",
+          "inherits": "~2.0.1",
+          "stream-browserify": "~1.0.0"
+        }
+      },
+      "npm:readable-stream@1.1.14": {
+        "map": {
+          "stream": "stream-browserify/index"
+        },
+        "systemjs": {
+          "main": "readable.js"
+        },
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "isarray": "0.0.1",
+          "string_decoder": "~0.10.0",
+          "inherits": "~2.0.1",
+          "stream-browserify": "~1.0.0"
+        }
+      }
     }
   },
   "devDependencies": {
