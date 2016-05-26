@@ -3,8 +3,6 @@ localhost:3000
 gzip
 browse
 ext .html
-websocket /echo cat
-log ./access.log
+log / stdout "{method} {uri} {latency}"
+#log ./access.log
 header /api Access-Control-Allow-Origin *
-
-root ./src
