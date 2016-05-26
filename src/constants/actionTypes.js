@@ -1,1 +1,1 @@
-export const Hoge = 'fuga';
+export const HIT_COMMAND = 'HIT_COMMAND';

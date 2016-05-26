@@ -10,17 +10,28 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import store from './store.js';
-import Top from './components/Top.jsx!';
+import Console from './components/Console/index.jsx!';
+import Credit from './components/Credit/index.jsx!';
 
 const history = syncHistoryWithStore(browserHistory, store);
 const container = document.querySelector('#app-container');
 
+import './style.js'
+import { getCSS } from './utils/generateStyle.js';
+
 const reactElement = (
-    <Provider store={store}>
+    <div>
+      <Provider store={store}>
         <Router history={history}>
-            <Route path="/" component={Top} />
+          <Route path="/" component={Console} />
+          <Route path="/credit" component={Credit} />
         </Router>
-    </Provider>
+      </Provider>
+
+      <style>
+        {getCSS()}
+      </style>
+    </div>
 );
 
 export function __unload() {

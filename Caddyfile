@@ -6,3 +6,8 @@ ext .html
 log / stdout "{method} {uri} {latency}"
 #log ./access.log
 header /api Access-Control-Allow-Origin *
+
+rewrite {
+  regexp (.*)
+  to {path} {path}/ /index.html?{query}
+}

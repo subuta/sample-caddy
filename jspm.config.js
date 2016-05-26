@@ -485,6 +485,7 @@ SystemJS.config({
     "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@6.8.0",
     "babel-polyfill": "npm:babel-polyfill@6.9.0",
     "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
+    "change-case": "npm:change-case@2.3.1",
     "child_process": "github:jspm/nodelibs-child_process@0.2.0-alpha",
     "co": "npm:co@4.6.0",
     "constants": "github:jspm/nodelibs-constants@0.2.0-alpha",
@@ -515,6 +516,7 @@ SystemJS.config({
     "redux": "npm:redux@3.5.2",
     "redux-batched-actions": "npm:redux-batched-actions@0.1.2",
     "redux-thunk": "npm:redux-thunk@2.1.0",
+    "reselect": "npm:reselect@2.5.1",
     "stream": "github:jspm/nodelibs-stream@0.2.0-alpha",
     "string_decoder": "github:jspm/nodelibs-string_decoder@0.2.0-alpha",
     "timers": "github:jspm/nodelibs-timers@0.2.0-alpha",
@@ -1114,6 +1116,101 @@ SystemJS.config({
         "esutils": "npm:esutils@2.0.2",
         "chalk": "npm:chalk@1.1.3",
         "js-tokens": "npm:js-tokens@1.0.3"
+      }
+    },
+    "npm:change-case@2.3.1": {
+      "map": {
+        "camel-case": "npm:camel-case@1.2.2",
+        "pascal-case": "npm:pascal-case@1.1.2",
+        "constant-case": "npm:constant-case@1.1.2",
+        "lower-case-first": "npm:lower-case-first@1.0.2",
+        "is-upper-case": "npm:is-upper-case@1.1.2",
+        "is-lower-case": "npm:is-lower-case@1.1.3",
+        "dot-case": "npm:dot-case@1.1.2",
+        "snake-case": "npm:snake-case@1.1.2",
+        "sentence-case": "npm:sentence-case@1.1.3",
+        "upper-case": "npm:upper-case@1.1.3",
+        "path-case": "npm:path-case@1.1.2",
+        "swap-case": "npm:swap-case@1.1.2",
+        "param-case": "npm:param-case@1.1.2",
+        "upper-case-first": "npm:upper-case-first@1.1.2",
+        "title-case": "npm:title-case@1.1.2",
+        "lower-case": "npm:lower-case@1.1.3"
+      }
+    },
+    "npm:constant-case@1.1.2": {
+      "map": {
+        "snake-case": "npm:snake-case@1.1.2",
+        "upper-case": "npm:upper-case@1.1.3"
+      }
+    },
+    "npm:pascal-case@1.1.2": {
+      "map": {
+        "camel-case": "npm:camel-case@1.2.2",
+        "upper-case-first": "npm:upper-case-first@1.1.2"
+      }
+    },
+    "npm:camel-case@1.2.2": {
+      "map": {
+        "sentence-case": "npm:sentence-case@1.1.3",
+        "upper-case": "npm:upper-case@1.1.3"
+      }
+    },
+    "npm:lower-case-first@1.0.2": {
+      "map": {
+        "lower-case": "npm:lower-case@1.1.3"
+      }
+    },
+    "npm:is-upper-case@1.1.2": {
+      "map": {
+        "upper-case": "npm:upper-case@1.1.3"
+      }
+    },
+    "npm:snake-case@1.1.2": {
+      "map": {
+        "sentence-case": "npm:sentence-case@1.1.3"
+      }
+    },
+    "npm:dot-case@1.1.2": {
+      "map": {
+        "sentence-case": "npm:sentence-case@1.1.3"
+      }
+    },
+    "npm:sentence-case@1.1.3": {
+      "map": {
+        "lower-case": "npm:lower-case@1.1.3"
+      }
+    },
+    "npm:is-lower-case@1.1.3": {
+      "map": {
+        "lower-case": "npm:lower-case@1.1.3"
+      }
+    },
+    "npm:swap-case@1.1.2": {
+      "map": {
+        "lower-case": "npm:lower-case@1.1.3",
+        "upper-case": "npm:upper-case@1.1.3"
+      }
+    },
+    "npm:upper-case-first@1.1.2": {
+      "map": {
+        "upper-case": "npm:upper-case@1.1.3"
+      }
+    },
+    "npm:path-case@1.1.2": {
+      "map": {
+        "sentence-case": "npm:sentence-case@1.1.3"
+      }
+    },
+    "npm:title-case@1.1.2": {
+      "map": {
+        "sentence-case": "npm:sentence-case@1.1.3",
+        "upper-case": "npm:upper-case@1.1.3"
+      }
+    },
+    "npm:param-case@1.1.2": {
+      "map": {
+        "sentence-case": "npm:sentence-case@1.1.3"
       }
     }
   }
