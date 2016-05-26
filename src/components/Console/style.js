@@ -1,14 +1,23 @@
 import { ACCENT_COLOR } from 'src/constants/styles.js';
 
+import { registerKeyframe } from 'src/utils/generateStyle.js';
+
 export const Top = {
-  height: '100vh',
-  width: '100vw',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
   color: ACCENT_COLOR
 };
 
+export const Cursor = {
+  animation: 'blink 0.7s infinite',
+  color: ACCENT_COLOR
+};
+
+// @keyframes blink{
+//   0% { opacity:1; }
+//   50% { opacity:0; }
+//   100% { opacity:1; }
+// }
+
 export default {
-  Top
+  Top,
+  Cursor
 }

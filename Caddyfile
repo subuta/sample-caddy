@@ -3,7 +3,7 @@ localhost:3000
 gzip
 browse
 ext .html
-log / stdout "{method} {uri} {latency}"
+#log / stdout "{method} {uri} {latency}"
 #log ./access.log
 header /api Access-Control-Allow-Origin *
 

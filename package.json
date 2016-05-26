@@ -1,20 +1,19 @@
 {
   "scripts": {
     "serve": "caddy & npm run watch",
-    "watch": "./node_modules/.bin/chokidar-socket-emitter -l 8090 & jspm bundle src/app.js -wid",
+    "bundle": "jspm bundle src/app.js -wid",
+    "watch": "./node_modules/.bin/chokidar-socket-emitter -l 8090 & npm run bundle",
     "unwatch": "jspm unbundle src/app.js"
   },
   "jspm": {
     "name": "sample-caddy",
-    "main": "sample-caddy.js",
+    "main": "src/appjs",
     "directories": {
       "lib": "src",
       "baseURL": "."
     },
     "dependencies": {
       "autoprefixer": "npm:autoprefixer@^6.3.6",
-      "babel-plugin-transform-object-rest-spread": "npm:babel-plugin-transform-object-rest-spread@^6.8.0",
-      "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@^6.8.0",
       "babel-polyfill": "npm:babel-polyfill@^6.9.0",
       "change-case": "npm:change-case@^2.3.1",
       "co": "npm:co@^4.6.0",
@@ -37,6 +36,10 @@
     "devDependencies": {
       "gulp": "npm:gulp@^3.9.1",
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.11",
+      "babel-plugin-transform-class-properties": "npm:babel-plugin-transform-class-properties@^6.9.0",
+      "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@^6.8.0",
+      "babel-preset-stage-0": "npm:babel-preset-stage-0@^6.5.0",
+      "babel-preset-stage-1": "npm:babel-preset-stage-1@^6.5.0",
       "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.5.8"
     },
     "peerDependencies": {
@@ -114,7 +117,10 @@
     }
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.9.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
     "chokidar-socket-emitter": "^0.5.2",
     "jspm": "^0.17.0-beta.16"
-  }
+  },
+  "dependencies": {}
 }

@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import consoleActions from 'src/actions/console.js';
+import * as consoleActions from 'src/actions/console.js';
 import { getStdout } from 'src/selectors/console.js';
 
 const mapStateToProps = createSelector(

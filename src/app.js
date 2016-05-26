@@ -1,5 +1,3 @@
-import 'babel-polyfill';
-
 // import injectTapEventPlugin from 'react-tap-event-plugin';
 // injectTapEventPlugin();
 
@@ -10,8 +8,8 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import store from './store.js';
-import Console from './components/Console/index.jsx!';
-import Credit from './components/Credit/index.jsx!';
+import Console from './components/Console/index.js';
+import Credit from './components/Credit/index.js';
 
 const history = syncHistoryWithStore(browserHistory, store);
 const container = document.querySelector('#app-container');
