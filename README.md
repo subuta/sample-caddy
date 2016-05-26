@@ -1,13 +1,13 @@
-#### Sample repository of jspm with caddy
+### Sample repository of jspm with caddy
 
-### how to install
+#### how to install
 ```
 npm install jspm@beta -g
 brew install caddy
 jspm i
 ```
 
-### run
+#### run
 ```
 caddy
 ```

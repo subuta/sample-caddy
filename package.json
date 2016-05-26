@@ -5,8 +5,14 @@
     "directories": {
       "lib": "src"
     },
+    "dependencies": {
+      "caddy-hot-loader": "github:jhkennedy4/caddy-hot-loader@^0.4.4"
+    },
     "devDependencies": {
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.11"
     }
+  },
+  "devDependencies": {
+    "jspm": "^0.17.0-beta.16"
   }
 }

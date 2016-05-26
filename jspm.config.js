@@ -1,4 +1,12 @@
 SystemJS.config({
+  paths: {
+    "sample-caddy/": "src/"
+  },
+  devConfig: {
+    "map": {
+      "plugin-babel": "npm:systemjs-plugin-babel@0.0.11"
+    }
+  },
   transpiler: "plugin-babel",
   packages: {
     "sample-caddy": {
@@ -15,10 +23,17 @@ SystemJS.config({
 SystemJS.config({
   packageConfigPaths: [
     "npm:@*/*.json",
-    "npm:*.json"
+    "npm:*.json",
+    "github:*/*.json"
   ],
   map: {
-    "plugin-babel": "npm:systemjs-plugin-babel@0.0.11"
+    "caddy-hot-loader": "github:jhkennedy4/caddy-hot-loader@0.4.4"
   },
-  packages: {}
+  packages: {
+    "github:jhkennedy4/caddy-hot-loader@0.4.4": {
+      "map": {
+        "lodash": "npm:lodash@3.10.1"
+      }
+    }
+  }
 });

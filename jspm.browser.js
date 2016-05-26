@@ -1,7 +1,7 @@
 SystemJS.config({
   baseURL: "/",
   paths: {
-    "npm:*": "jspm_packages/npm/*",
-    "sample-caddy/": "src/"
+    "npm:": "jspm_packages/npm/",
+    "github:": "jspm_packages/github/"
   }
 });
