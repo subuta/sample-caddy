@@ -8,6 +8,10 @@ SystemJS.config({
     "build.js": [
       "sample-caddy/app.js",
       "sample-caddy/components/Top.jsx!github:floatdrop/plugin-jsx@1.2.1/jsx.js",
+      "sample-caddy/styles.js",
+      "npm:free-style@1.2.1/dist/free-style.js",
+      "npm:free-style@1.2.1.json",
+      "npm:systemjs-plugin-babel@0.0.11.json",
       "npm:react@15.1.0/react.js",
       "npm:react@15.1.0.json",
       "github:jspm/nodelibs-process@0.2.0-alpha/process.js",
@@ -50,7 +54,6 @@ SystemJS.config({
       "npm:react@15.1.0/lib/KeyEscapeUtils.js",
       "npm:react@15.1.0/lib/PooledClass.js",
       "npm:systemjs-plugin-babel@0.0.11/babel-helpers/inherits.js",
-      "npm:systemjs-plugin-babel@0.0.11.json",
       "npm:systemjs-plugin-babel@0.0.11/babel-helpers/possibleConstructorReturn.js",
       "npm:systemjs-plugin-babel@0.0.11/babel-helpers/createClass.js",
       "npm:systemjs-plugin-babel@0.0.11/babel-helpers/classCallCheck.js",

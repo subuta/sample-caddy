@@ -1,5 +1,6 @@
 access.log
 jspm_packages
+node_modules
 build.js
 build.js.map
 npm-debug.log
