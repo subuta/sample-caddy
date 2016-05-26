@@ -1,3 +1,3 @@
-export const getStdout = (state, props) => {
-  return state.stdout;
+export const getLastCommand = (state, props) => {
+  return state.console.lastCommand;
 };

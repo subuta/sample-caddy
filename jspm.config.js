@@ -16,8 +16,8 @@ SystemJS.config({
   },
   babelOptions: {
     "plugins": [
-        "babel-plugin-transform-class-properties",
-        "babel-plugin-transform-react-jsx"
+      "babel-plugin-transform-class-properties",
+      "babel-plugin-transform-react-jsx"
     ],
     "optional": [
       "runtime",
@@ -795,6 +795,7 @@ SystemJS.config({
     "https": "github:jspm/nodelibs-https@0.2.0-alpha",
     "icepick": "npm:icepick@1.2.0",
     "jsx": "github:floatdrop/plugin-jsx@1.2.1",
+    "keycode": "npm:keycode@2.1.1",
     "lodash": "npm:lodash@4.13.1",
     "module": "github:jspm/nodelibs-module@0.2.0-alpha",
     "net": "github:jspm/nodelibs-net@0.2.0-alpha",

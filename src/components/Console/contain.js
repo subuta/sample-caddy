@@ -3,14 +3,13 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as consoleActions from 'src/actions/console.js';
-import { getStdout } from 'src/selectors/console.js';
+import { getLastCommand } from 'src/selectors/console.js';
 
 const mapStateToProps = createSelector(
-  getStdout,
-  (stdout) => {
-    console.log('stdout = ', stdout);
+  getLastCommand,
+  (lastCommand) => {
     return {
-      stdout
+      lastCommand
     };
   }
 );
