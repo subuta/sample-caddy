@@ -1,4 +1,5 @@
 import {
+  ACCENT_COLOR,
   BACKGROUND_COLOR
 } from 'src/constants/styles.js';
 
@@ -14,6 +15,12 @@ export const Rules = {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: BACKGROUND_COLOR
+  },
+
+  a: {
+    color: ACCENT_COLOR,
+    opacity: 0.6,
+    fontSize: 12
   }
 };
 

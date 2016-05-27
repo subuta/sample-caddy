@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import { Link } from 'react-router';
 
 import contain from './contain.js';
 import style from './style.js';
@@ -43,6 +44,7 @@ class Top extends Component {
                  onBlur={this._onBlur.bind(this)}
                  value={command}/>
         {this._renderResult()}
+        <Link to="credit">credit→</Link>
       </div>
     );
   }
@@ -52,6 +54,7 @@ class Top extends Component {
     if (enteredCommand === 'ls') {
       return (
         <div>
+          <div>many thanks to ...</div>
           <div>jspm</div>
           <div>react</div>
           <div>redux</div>
