@@ -3,20 +3,24 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as consoleActions from 'src/actions/console.js';
-import { getLastCommand } from 'src/selectors/console.js';
+import { ActionCreators as undoActions } from 'redux-undo';
+import { getLastCommand, getEnteredCommand } from 'src/selectors/console.js';
 
 const mapStateToProps = createSelector(
   getLastCommand,
-  (lastCommand) => {
+  getEnteredCommand,
+  (lastCommand, enteredCommand) => {
     return {
-      lastCommand
+      lastCommand,
+      enteredCommand
     };
   }
 );
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    ...bindActionCreators(consoleActions, dispatch)
+    ...bindActionCreators(consoleActions, dispatch),
+    ...bindActionCreators(undoActions, dispatch)
   };
 };
 

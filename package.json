@@ -32,6 +32,7 @@
       "react-tap-event-plugin": "npm:react-tap-event-plugin@^1.0.0",
       "redux-batched-actions": "npm:redux-batched-actions@^0.1.2",
       "redux-thunk": "npm:redux-thunk@^2.1.0",
+      "redux-undo": "github:omnidan/redux-undo@master",
       "reselect": "npm:reselect@^2.5.1"
     },
     "devDependencies": {

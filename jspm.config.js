@@ -813,6 +813,7 @@ SystemJS.config({
     "redux": "npm:redux@3.5.2",
     "redux-batched-actions": "npm:redux-batched-actions@0.1.2",
     "redux-thunk": "npm:redux-thunk@2.1.0",
+    "redux-undo": "github:omnidan/redux-undo@master",
     "reselect": "npm:reselect@2.5.1",
     "stream": "github:jspm/nodelibs-stream@0.2.0-alpha",
     "string_decoder": "github:jspm/nodelibs-string_decoder@0.2.0-alpha",

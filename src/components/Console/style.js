@@ -5,7 +5,7 @@ import { registerKeyframe } from 'src/utils/generateStyle.js';
 export const Top = {
   color: ACCENT_COLOR,
   height: 200,
-  width: 300
+  width: 360
 };
 
 const blink = {
@@ -27,8 +27,15 @@ export const Input = {
   color: ACCENT_COLOR
 };
 
+export const Hint = {
+  opacity: 0.6,
+  fontSize: 12,
+  color: ACCENT_COLOR
+};
+
 export default {
   Top,
   Input,
+  Hint,
   Cursor
 }

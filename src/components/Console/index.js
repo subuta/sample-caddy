@@ -9,7 +9,12 @@ import keycode from 'keycode';
 const classes = registerStyles(style);
 class Top extends Component {
   static propTypes = {
-    hoge: PropTypes.string
+    hitCommand: PropTypes.func.isRequired,
+    enterCommand: PropTypes.func.isRequired,
+    undo: PropTypes.func.isRequired,
+    redo: PropTypes.func.isRequired,
+    lastCommand: PropTypes.string,
+    enteredCommand: PropTypes.string
   };
 
   constructor() {
@@ -20,23 +25,31 @@ class Top extends Component {
   }
 
   render() {
+    let command = this.props.lastCommand;
+
+    // keep blank value.
+    if (_.isEmpty(command)) {
+      command = '';
+    }
+
     return (
       <div className={classes.Top}>
-        $ <input className={classes.Input}
+        $ {this._renderCursor()}
+        <input className={classes.Input}
                  type="text"
-                 onKeyPress={this._onKeyPress.bind(this)}
+                 onKeyDown={this._onKeyDown.bind(this)}
+                 onChange={this._onChange.bind(this)}
                  onFocus={this._onFocus.bind(this)}
                  onBlur={this._onBlur.bind(this)}
-                 defaultValue="ls"/>
+                 value={command}/>
         {this._renderResult()}
-        {this._renderCursor()}
       </div>
     );
   }
 
   _renderResult() {
-    const { lastCommand } = this.props;
-    if (lastCommand === 'ls') {
+    const { enteredCommand } = this.props;
+    if (enteredCommand === 'ls') {
       return (
         <div>
           <div>jspm</div>
@@ -47,7 +60,10 @@ class Top extends Component {
       );
     } else {
       return (
-        <div></div>
+        <div className={classes.Hint}>
+          please input `ls` command and press `enter` key...<br/>
+          and you can also undo(↑) / redo(↓) commands.
+        </div>
       )
     }
   }
@@ -58,11 +74,24 @@ class Top extends Component {
     }
   }
 
-  _onKeyPress(e) {
+  _onChange(e) {
+    const { hitCommand } = this.props;
+    hitCommand(e.target.value);
+  }
+
+  _onKeyDown(e) {
+    const { enterCommand, hitCommand,
+            undo, redo } = this.props;
     const key = keycode(e);
     if (key === 'enter') {
-      const { hitCommand } = this.props;
       hitCommand(e.target.value);
+      enterCommand(e.target.value);
+    } else if (key === 'up') {
+      undo();
+    } else if (key === 'down') {
+      redo();
+    } else {
+      this._onChange(e);
     }
     return true;
   }
